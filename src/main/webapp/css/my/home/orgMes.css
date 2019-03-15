@@ -1,0 +1,94 @@
+html,body{
+    margin: 0 auto;
+    height: 100%;
+}
+.myTop{
+    /*background: aqua;*/
+    height: 53px;
+}
+.myTheme{
+    /*background: brown;*/
+    height: 114px;
+    margin-top: 2px;
+}
+.myTheme .logo{
+    /*background: cadetblue;*/
+    width: 8%;
+    height: 100%;
+    float: left;
+}
+.myTheme .logo img{
+    width: 100%;
+    height: 100%;
+}
+.myTheme .themeContent{
+    /*background:forestgreen;*/
+    width: 92%;
+    height: 100%;
+    float: left;
+    font-size: 70px;
+    font-family: "华文行楷";
+}
+.mynav{
+    /*background: bisque;*/
+    height: 40px;
+    margin-top: 4px;
+}
+.myContent{
+    /*background: brown;*/
+    margin-top: 2px;
+    height: auto;
+    margin: 0 90px;  /* 0 250px 适合大屏电脑 */
+}
+.myContent .myContent_list{
+   /* background: darkturquoise;*/
+    height: 95%;
+}
+.myContent .myContent_pagination{
+    /*background: darkviolet;*/
+    height: 5%;
+    text-align: center;
+}
+.myContent_pagination ul.pagination{
+    margin-top: 9px;
+}
+.myBanQuan{
+    padding: 10px;
+    height: 130px;
+    margin-top: 8px;
+    text-align: center;
+    /*border:1px solid #cceff5;background:#fafcfd;*/
+    background-color: #ffffff;
+    width: 99.5%;
+}
+#myModal{
+    margin-top: 200px;
+}
+
+a.list-group-item {
+    height:auto;
+    min-height:240px;
+}
+a.list-group-item.active small {
+    color:#fff;
+}
+.stars {
+    margin:20px auto 1px;
+}
+
+/*图片显示规格*/
+.myContent .myImg{
+    height: 208px;
+}
+
+
+
+
+
+
+
+
+
+
+
+

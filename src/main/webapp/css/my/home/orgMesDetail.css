@@ -1,0 +1,277 @@
+html,body{
+    margin: 0 auto;
+    height: 100%;
+}
+.myTop{
+    /*background: aqua;*/
+    height: 53px;
+}
+.myTheme{
+    /*background: brown;*/
+    height: 114px;
+    margin-top: 2px;
+}
+.myTheme .logo{
+    /*background: cadetblue;*/
+    width: 8%;
+    height: 100%;
+    float: left;
+}
+.myTheme .logo img{
+    width: 100%;
+    height: 100%;
+}
+.myTheme .themeContent{
+    /*background:forestgreen;*/
+    width: 92%;
+    height: 100%;
+    float: left;
+    font-size: 70px;
+    font-family: "华文行楷";
+}
+.mynav{
+    /*background: bisque;*/
+    height: 50px;
+    margin-top: 4px;
+}
+.mynav ul.nav.nav-tabs{
+    height: 100%;
+}
+.mynav ul a {
+    line-height: 29px;
+}
+.myContent{
+    /*background: brown;*/
+    margin-top: 2px;
+    height: auto;
+    margin: 0 11%;
+}
+.myC{
+    height: 958px;
+    /*background:goldenrod;*/
+}
+.myC_base{
+    /*background: chocolate;*/
+    float: left;
+    width: 69%;
+    height: auto;
+}
+.myC_base_element{
+    border:1px solid #cceff5;background:#fafcfd;
+    margin-top: 5px;
+}
+.myC_img{
+    width: 30%;
+    /* background: cyan;*/
+    float: left;
+    height:313px;
+    border:1px solid #cceff5;background:#fafcfd;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding: 10px;
+}
+.myWords{
+    float: left;
+    width: 30%;
+    height: 631px;
+    background: #00c800;
+    border:1px solid #cceff5;background:#fafcfd;
+    margin-top: 5px;
+    margin-left: 5px;
+}
+.myC_img img{
+    height: 100%;
+    width: 100%;
+
+}
+.myC_textAndImg{
+    /* background: lightgreen;*/
+    margin-left: 50px;
+    height:558px;
+    overflow: auto;
+}
+.myC_textAndImg img{
+    text-align: center;
+}
+.myC_ownMes{
+    /*background:green;*/
+    height:400px;
+    width: 100%;
+    border:1px solid #cceff5;background:#fafcfd;
+    margin-top: 5px;
+}
+.myBanQuan{
+    /* background: darkred;*/
+    border:1px solid #cceff5;background:#fafcfd;
+    height: 200px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+/*轮播图CSS(社长信息)*/
+/* Carousel */
+.container{
+    width: 85%;
+}
+
+#quote-carousel {
+    padding: 0 10px 30px 10px;
+    margin-top: 30px;
+    /* Control buttons  */
+    /* Previous button  */
+    /* Next button  */
+    /* Changes the position of the indicators */
+    /* Changes the color of the indicators */
+}
+#quote-carousel .carousel-control {
+    background: none;
+    color: #CACACA;
+    font-size: 2.3em;
+    text-shadow: none;
+    margin-top: 30px;
+}
+#quote-carousel .carousel-control.left {
+    left: -60px;
+}
+#quote-carousel .carousel-control.right {
+    right: -60px;
+}
+#quote-carousel .carousel-indicators {
+    right: 50%;
+    top: 225px;
+    bottom: 0px;
+    margin-right: -19px;
+}
+#quote-carousel .carousel-indicators li {
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    cursor: pointer;
+    border: 4px solid #CCC;
+    border-radius: 50px;
+    opacity: 0.4;
+    overflow: hidden;
+    transition: all 0.4s;
+}
+#quote-carousel .carousel-indicators .active {
+    background: #333333;
+    width: 128px;
+    height: 128px;
+    border-radius: 100px;
+    border-color: #f33;
+    opacity: 1;
+    overflow: hidden;
+}
+.carousel-inner {
+    min-height: 300px;
+}
+.item blockquote {
+    border-left: none;
+    margin: 0;
+}
+.item blockquote p:before {
+    content: "\f10d";
+    font-family: 'Fontawesome';
+    float: left;
+    margin-right: 10px;
+}
+
+
+/*留言墙*/
+.liuYan {
+    width: 30%;
+    height: 629px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 0px;
+    background: #00ee00;
+}
+ li.ui-state-default{
+    background:#fff0;
+    border:none;
+    border-bottom:1px solid #ddd;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+li.ui-state-default:last-child{
+    border-bottom:none;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+    background-color:#fff;
+    -webkit-font-smoothing: antialiased;
+    font: normal 14px Roboto,arial,sans-serif;
+}
+
+.btn,.form-control,.well {
+    border-radius:1px;
+    box-shadow:0 0 0;
+}
+
+.form-control {
+    border-color:#d7d7d7;
+}
+
+.btn-primary {
+    border-color:transparent;
+}
+
+.btn-primary, .list-group-item.active:focus {
+    background-color:#4285f4;
+}
+
+.btn-plus {
+    background-color:#ffffff;
+    border-width:1px;
+    border-color:#dddddd;
+    box-shadow:1px 1px 0 #999999;
+    border-radius:3px;color:#666666;
+    text-shadow:0 0 1px #bbbbbb;
+}
+
+.well,.panel {
+    border:1px solid #cceff5;background:#fafcfd;
+    box-shadow:0 1px 0 #cfcfcf;
+    border-radius:3px;
+}
+
+hr {
+    border-color:#ececec;
+}
+
+button {
+    outline: 0;
+}
+
+.btn span{
+    color:#666666;
+}
+
+.list-group-item:first-child,.list-group-item:last-child {
+    border-radius:0;
+}
+
+h3 {
+    border:0 solid #efefef;
+    border-bottom-width:1px;
+    padding-bottom:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

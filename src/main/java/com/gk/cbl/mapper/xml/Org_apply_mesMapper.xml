@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gk.cbl.mapper.Org_apply_mesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gk.cbl.entity.Org_apply_mes">
+        <id column="id" property="id" />
+        <result column="userId" property="userId" />
+        <result column="mesId" property="mesId" />
+        <result column="applyReason" property="applyReason" />
+        <result column="applyTime" property="applyTime" />
+        <result column="isAllow" property="isAllow" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, userId, mesId, applyReason, applyTime, isAllow
+    </sql>
+
+</mapper>

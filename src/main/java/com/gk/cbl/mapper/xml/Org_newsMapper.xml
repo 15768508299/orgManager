@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gk.cbl.mapper.Org_newsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gk.cbl.entity.Org_news">
+        <id column="id" property="id" />
+        <result column="newTheme" property="newTheme" />
+        <result column="newPhoto" property="newPhoto" />
+        <result column="newIntroduction" property="newIntroduction" />
+        <result column="newDetail" property="newDetail" />
+        <result column="issueTime" property="issueTime" />
+        <result column="issueBy" property="issueBy" />
+        <result column="readNum" property="readNum" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, newTheme, newPhoto, newIntroduction, newDetail, issueTime, issueBy, readNum
+    </sql>
+
+</mapper>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gk.cbl.mapper.Org_mesMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gk.cbl.entity.Org_mes">
+        <id column="id" property="id" />
+        <result column="mesName" property="mesName" />
+        <result column="mesPhoto" property="mesPhoto" />
+        <result column="mesIntroduction" property="mesIntroduction" />
+        <result column="mesDetail" property="mesDetail" />
+        <result column="mesCreate" property="mesCreate" />
+        <result column="mesCreateTime" property="mesCreateTime" />
+        <result column="mesNum" property="mesNum" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, mesName, mesPhoto, mesIntroduction, mesDetail, mesCreate, mesCreateTime, mesNum
+    </sql>
+
+</mapper>

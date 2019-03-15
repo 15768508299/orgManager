@@ -1,0 +1,119 @@
+html,body{
+    margin: 0 auto;
+    height: 100%;
+}
+.myTop{
+    /*background: aqua;*/
+    height: 53px;
+}
+.myContent{
+    height: 960px;
+    margin-top: 10px;
+    margin: 0 90px;
+    border:1px solid #ffffff;background:#ffffff;
+}
+.one_content{
+    width: 100%;
+    height: 12%;
+    border-bottom: 1px solid #9ea1a4;
+    padding: 20px;
+}
+.two_content{
+    width: 100%;
+    height: 88%;
+    padding: 20px;
+
+
+}
+
+.myBanQuan{
+    /* background: darkred;*/
+    border:1px solid #ffffff;background:#ffffff;
+    height: 200px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+
+/*留言墙*/
+.liuYan {
+    width: 30%;
+    height: 629px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 5px;
+    padding-left: 0px;
+    background: #00ee00;
+}
+li.ui-state-default{
+    background:#fff0;
+    border:none;
+    border-bottom:1px solid #ddd;
+    text-align: left;
+    padding-bottom: 10px;
+}
+
+li.ui-state-default:last-child{
+    border-bottom:none;
+}
+
+@import url(http://fonts.googleapis.com/css?family=Roboto:400);
+body {
+    background-color:#fff;
+    -webkit-font-smoothing: antialiased;
+    font: normal 14px Roboto,arial,sans-serif;
+}
+
+.btn,.form-control,.well {
+    border-radius:1px;
+    box-shadow:0 0 0;
+}
+
+.form-control {
+    border-color:#d7d7d7;
+}
+
+.btn-primary {
+    border-color:transparent;
+}
+
+.btn-primary, .list-group-item.active:focus {
+    background-color:#4285f4;
+}
+
+.btn-plus {
+    background-color:#ffffff;
+    border-width:1px;
+    border-color:#dddddd;
+    box-shadow:1px 1px 0 #999999;
+    border-radius:3px;color:#666666;
+    text-shadow:0 0 1px #bbbbbb;
+}
+
+.well,.panel {
+    border:1px solid #cceff5;background:#fafcfd;
+    box-shadow:0 1px 0 #cfcfcf;
+    border-radius:3px;
+}
+
+hr {
+    border-color:#ececec;
+}
+
+button {
+    outline: 0;
+}
+
+.btn span{
+    color:#666666;
+}
+
+.list-group-item:first-child,.list-group-item:last-child {
+    border-radius:0;
+}
+
+h3 {
+    border: 0 solid #efefef;
+    border-bottom-width: 1px;
+    padding-bottom: 10px;
+}

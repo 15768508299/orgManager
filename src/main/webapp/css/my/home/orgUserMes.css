@@ -1,0 +1,112 @@
+html,body{
+    margin: 0 auto;
+    height: 100%;
+}
+.myTop{
+    /*background: aqua;*/
+    height: 53px;
+}
+.myTheme{
+    /*background: brown;*/
+    height: 114px;
+    margin-top: 2px;
+}
+.myTheme .logo{
+    /*background: cadetblue;*/
+    width: 8%;
+    height: 100%;
+    float: left;
+}
+.myTheme .logo img{
+    width: 100%;
+    height: 100%;
+}
+.myTheme .themeContent{
+    /*background:forestgreen;*/
+    width: 92%;
+    height: 100%;
+    float: left;
+    font-size: 70px;
+    font-family: "华文行楷";
+}
+.mynav{
+    height: 41px;
+    margin-top: 2px;
+}
+.myContent{
+    margin-top: 5px;
+    width: 100%;
+    height: 250px;
+    border:1px solid #ffffff;background:#ffffff;
+}
+.user_img{
+    float: left;
+    width: 20%;
+    height: 250px;
+    padding: 10px;
+}
+.user_mes{
+    float: left;
+    width: 80%;
+    height: 250px;
+}
+/*.myMes{
+    margin-top: 5px;
+    width: auto;
+    padding: 5px;
+    border:1px solid #ffffff;background:#ffffff;
+}
+.myMes_title{
+    background: #d9edf7;
+    font-size: 25px;
+    height:35px;
+    font-weight: bold;
+}*/
+.one{
+    border:1px solid #ffffff;background:#ffffff;
+    height: 36px;
+    font-size: 22px;
+}
+.panel_child{
+    float: left;
+    width: 49%;
+    margin-left: 5px;
+}
+
+/*第二个tab*/
+.socalMes_rece{
+    width: 100%;
+    height: auto;
+    margin-top: 2px;
+}
+.socalMes_rece_title{
+    font-size: 18px;
+    width: 100%;
+    height: 34px;
+    background:#fafcfd;
+    padding: 5px;
+    margin-top: -1px;
+}
+.myBanQuan{
+    padding: 10px;
+    height: 130px;
+    margin-top: -17px;
+    text-align: center;
+    /*border:1px solid #cceff5;background:#fafcfd;*/
+    background-color: #ffffff;
+    width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+

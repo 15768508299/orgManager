@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gk.cbl.mapper.Org_act_olMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gk.cbl.entity.Org_act_ol">
+        <id column="id" property="id" />
+        <result column="description" property="description" />
+        <result column="target" property="target" />
+        <result column="photo" property="photo" />
+        <result column="olLevel" property="olLevel" />
+        <result column="actid" property="actid" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, description, target, photo, olLevel, actid
+    </sql>
+
+</mapper>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gk.cbl.mapper.Org_userMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.gk.cbl.entity.Org_user">
+        <id column="id" property="id" />
+        <result column="userName" property="userName" />
+        <result column="userPassword" property="userPassword" />
+        <result column="userTrueName" property="userTrueName" />
+        <result column="userAge" property="userAge" />
+        <result column="userSex" property="userSex" />
+        <result column="userFavour" property="userFavour" />
+        <result column="userIdentifity" property="userIdentifity" />
+        <result column="userIntrod" property="userIntrod" />
+        <result column="userEmail" property="userEmail" />
+        <result column="userQQWei" property="userQQWei" />
+        <result column="userPhone" property="userPhone" />
+        <result column="userPhoto" property="userPhoto" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        id, userName, userPassword, userTrueName, userAge, userSex, userFavour, userIdentifity, userIntrod, userEmail, userQQWei, userPhone, userPhoto
+    </sql>
+
+    <select id="selectListBo" resultMap="com.gk.cbl.Bo.UserBo">
+        SELECT
+        <include refid="Base_Column_List" />
+        FROM org_user
+        <where>
+            ${ew.sqlSegment}
+        </where>
+    </select>
+</mapper>

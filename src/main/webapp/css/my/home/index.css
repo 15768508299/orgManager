@@ -1,0 +1,182 @@
+html,body{
+    margin: 0 auto;
+    height: 100%;
+    background-color: #f5f6f7;
+}
+.myTop{
+    /*background: aqua;*/
+    height: 53px;
+}
+.childMynav{
+    height: 41px;
+    margin-top: 2px;
+}
+.myBody{
+    margin: 0 90px;
+    min-width: 600px;
+    min-height: 600px;
+}
+.par_lun_rig{
+    height: 500px;
+    /*background: crimson;*/
+    margin-top: 2px;
+
+}
+.lunbo {
+    margin-right: 5px;
+    width: 64%;
+    float: left;
+    height: 500px;
+    border:1px solid #ffffff;background:#ffffff;
+   /* background-color: #ffffff;*/
+
+}
+/*.lunbo #carousel-example-generic{
+    width: 78%;
+}*/
+.rightMes{
+    padding: 10px;
+    width: 35%;
+    float: left;
+    height: 500px;
+    border:1px solid #ffffff;background:#ffffff;
+    /*background-color: #ffffff;*/
+}
+.leftMes{
+    width:20%;
+    float: left;
+    height: 900px;
+}
+.myContent{
+    margin-top: 2px;
+    height: 500px;
+    width: 100%;
+}
+.myContent_left{
+    width: 50%;
+    float: left;
+    height: 100%;
+   /* border:1px solid #cceff5;background:#fafcfd;*/
+    border:1px solid #ffffff;background:#ffffff;
+    /*background-color: #ffffff;*/
+    margin-right: 5px;
+    margin-top: 2px;
+    padding: 10px;
+}
+.myContent_right{
+    margin-top: 2px;
+    float: left;
+    width: 49%;
+    height: 100%;
+    /*border:1px solid #cceff5;background:#fafcfd;*/
+    border:1px solid #ffffff;background:#ffffff;
+    padding: 10px;
+}
+
+.myBanQuan{
+    padding: 10px;
+    height: 130px;
+    margin-top: 8px;
+    text-align: center;
+    /*border:1px solid #cceff5;background:#fafcfd;*/
+    background-color: #ffffff;
+    width: 99.5%;
+}
+
+/*轮播图CSS*/
+/* Makes images fully responsive */
+
+.img-responsive,
+.thumbnail > img,
+.thumbnail a > img,
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+/* ------------------- Carousel Styling ------------------- */
+
+.carousel-inner {
+    border-radius: 15px;
+    height: 485px;
+}
+
+.carousel-caption {
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 10;
+    padding: 0 0 10px 25px;
+    color: #fff;
+    text-align: left;
+}
+
+.carousel-indicators {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 15;
+    margin: 0;
+    padding: 0 25px 25px 0;
+    text-align: right;
+}
+
+.carousel-control.left,
+.carousel-control.right {
+    background-image: none;
+}
+
+
+/* ------------------- Section Styling - Not needed for carousel styling ------------------- */
+
+.section-white {
+    padding: 10px 0;
+}
+
+.hei{
+    height: 485px;
+}
+
+.section-white {
+    background-color: #fff;
+    color: #555;
+    height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+    .section-white {
+    }
+
+}
+
+@media screen and (min-width: 992px) {
+
+    .container {
+        max-width: 1500px;
+        width: 100%;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
