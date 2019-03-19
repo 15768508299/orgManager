@@ -68,6 +68,5 @@ public class Org_wordController {
 
         return "home/orgMesDetail";
     }
-
 }
 

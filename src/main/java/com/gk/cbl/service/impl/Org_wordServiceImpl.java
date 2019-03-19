@@ -2,9 +2,12 @@ package com.gk.cbl.service.impl;
 
 import com.baomidou.mybatisplus.mapper.EntityWrapper;
 import com.gk.cbl.Bo.WordBo;
+import com.gk.cbl.entity.Org_mes_user;
+import com.gk.cbl.entity.Org_send_rece;
 import com.gk.cbl.entity.Org_user;
 import com.gk.cbl.entity.Org_word;
 import com.gk.cbl.mapper.Org_wordMapper;
+import com.gk.cbl.service.Org_mes_userService;
 import com.gk.cbl.service.Org_userService;
 import com.gk.cbl.service.Org_wordService;
 import com.baomidou.mybatisplus.service.impl.ServiceImpl;
@@ -12,10 +15,7 @@ import com.sun.org.apache.bcel.internal.generic.IF_ACMPEQ;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 /**
  * <p>

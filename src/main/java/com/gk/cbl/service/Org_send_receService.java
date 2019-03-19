@@ -18,11 +18,14 @@ import java.util.Map;
  */
 public interface Org_send_receService extends IService<Org_send_rece> {
 
-    Map<String,Object> getUserSends(Integer page, Integer size, Integer userid, Integer isRead);
+    Map<String,Object> getUserSends(Integer page, Integer size, Integer userid, Integer isRead,Integer isAdmin);
 
-    List<sendReceBo> userSend(List<Org_send_rece> sendReces);
+    List<sendReceBo> userSend(List<Org_send_rece> sendReces,Integer isAdmin);
 
     sendReceBo findById(Integer id);
 
     void deleteByIds(String ids);
+
+    String applymes(Integer userid, Integer mesid);
+
 }

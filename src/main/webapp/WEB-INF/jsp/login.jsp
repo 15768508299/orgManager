@@ -66,7 +66,7 @@
                    }else{
                        if(data.message == "社团管理员登录成功"){
                            //跳转一个单独的处理社团信息的页面
-                            location.href="<%=basePath%>org_index_ol/goManMes?mesid="+data.mesid;
+                            location.href="<%=basePath%>org_index_ol/goManMes?mesid="+data.mesid+"&userid="+data.userid;
                        }else{
                            location.href = "<%=basePath%>";
                        }

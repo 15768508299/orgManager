@@ -30,6 +30,30 @@
             location.href = '<%=basePath%>org_word/comment?'+param;
         }
     }
+
+    function applyMes() {
+        //入社申请：返回函数。。后台
+
+        var i;
+        <shiro:guest>
+            i = 0;
+        </shiro:guest>
+        <shiro:authenticated>
+            i = <shiro:principal property="id"/>;
+        </shiro:authenticated>
+        //var i = ;
+        //console.log(i);
+        $.ajax({
+            url:'<%=basePath%>org_send_rece/applymes?userid=' + i + '&mesid=${mesWithBLOBs.id}',
+            type:'get',
+            success:function (data) {
+                alert(data.message);
+            }
+
+
+        });
+       // console.log(i+"---------------"+${mesWithBLOBs.id});
+    }
 </script>
 <body>
 <div class="myTop">
@@ -62,7 +86,8 @@
     <div class="myC">
         <div class="myC_base">
             <div class="myC_base_element">
-                <h2>${mesWithBLOBs.mesName}</h2><br/>
+                <div style="width: 100%;height: 36px;padding-top: 10px;padding-left: 5px"><span style="width: 70%;font-size: 30px"><b>${mesWithBLOBs.mesName}</b> </span><button onclick="applyMes()">申请入社</button>
+                </div><br><br><br>
                 <p style="width: 96%;height: 100px;overflow: auto;margin-top: -23px;margin-left: 25px;font-size: 15px;">
                     ${mesWithBLOBs.mesIntroduction}
                 </p>

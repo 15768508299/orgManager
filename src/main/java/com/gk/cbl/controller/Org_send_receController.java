@@ -9,6 +9,7 @@ import com.gk.cbl.service.Org_send_receService;
 import com.gk.cbl.service.Org_userService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.ui.Model;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import org.springframework.stereotype.Controller;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -76,6 +78,21 @@ public class Org_send_receController {
         model.addAttribute("sendRecesExes",userSends.get("rows"));
         return "home/orgUserMes";*/
         return "redirect:/org_index_ol/goUserMes?userid="+userid;
+    }
+
+    @RequestMapping("/applymes")
+    @ResponseBody
+    public Map<String, Object> applymes(Integer userid,Integer mesid,ModelMap map){
+        Map<String, Object> resultMap = new HashMap<>();
+        resultMap.put("message", "申请失败！请刷新重试。");
+        if(userid == null || map == null) return resultMap;
+        if(userid == 0){
+            resultMap.put("message", "请登录重试。");}
+        else {
+            String applymes = sendReceService.applymes(userid, mesid);
+            resultMap.put("message", applymes);
+        }
+        return resultMap;
     }
 
 }

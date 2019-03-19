@@ -115,11 +115,15 @@ public class Org_index_olController {
             subject.login(usernamePasswordToken);
             //System.out.println("--------------------->>" +subject.hasRole("社团管理员"));
             //判断是否为社团管理员，然后截取登录名后的社团id，进行返回
-           if(subject.hasRole("社团管理员") && username.length() == 7){
+            if(subject.hasRole("社团管理员") && username.length() == 7){
                 String strMesId = username.substring(5);
                 int mesid = Integer.parseInt(strMesId);
                 resultMap.put("message", "社团管理员登录成功");
                 resultMap.put("mesid",mesid);
+                Org_user user = (Org_user) subject.getPrincipal();
+                resultMap.put("userid",user.getId());
+
+
             }else {
                 resultMap.put("message", "登录成功");
             }
@@ -218,7 +222,7 @@ public class Org_index_olController {
         Integer myPage1 = (page==null)?1:page;
         Integer mySize1 = (size==null)?10:size;
 
-        Map<String, Object> sendPageMap = sendReceService.getUserSends(myPage1, mySize1, userid, isRead);
+        Map<String, Object> sendPageMap = sendReceService.getUserSends(myPage1, mySize1, userid, isRead,1);
         int count = sendReceService.selectCount(new EntityWrapper<Org_send_rece>().eq("receId", userid).eq("isread", 0));
         if (count > 0){
             model.addAttribute("count",count);
@@ -248,16 +252,17 @@ public class Org_index_olController {
     }
 
     @RequestMapping(value = "/goManMes",method = RequestMethod.GET)
-    public String goManMes(Integer mesid,Integer page1,Integer size1,String orderCol1,String orderRule1,Integer page2,Integer size2,String orderCol2,String orderRule2,ModelMap modelMap,Integer handleArea){
+    public String goManMes(Integer mesid,Integer page1,Integer size1,String orderCol1,String orderRule1,Integer page2,Integer size2,String orderCol2,String orderRule2,ModelMap modelMap,Integer handleArea,Integer userid,Integer isRead){
         modelMap.put("handleArea",handleArea);
         //查询该社团信息
         Org_mes orgMes = mesService.selectOne(new EntityWrapper<Org_mes>().eq("id", mesid));
+        Integer myPage1 = (page1==null)?1:page1;
+        Integer mySize1 = (size1==null)?10:size1;
         if (orgMes != null){
             modelMap.addAttribute("mesWithBLOB", orgMes);
 
             //查询该社团下的新闻
-            Integer myPage1 = (page1==null)?1:page1;
-            Integer mySize1 = (size1==null)?10:size1;
+
             Map query = new HashMap();
             query.put("mesid",orgMes.getId());
             Page<Org_news> newsPage = this.newsService.selectPageNews(myPage1, mySize1, query);
@@ -276,8 +281,22 @@ public class Org_index_olController {
             int actber = (int) (activityPage.getTotal() % activityPage.getSize() == 0? activityPage.getTotal() / activityPage.getSize() : (activityPage.getTotal() / activityPage.getSize()+1));
             modelMap.put("actList_AllPage", actber);
             modelMap.put("actList_nowPage",activityPage.getCurrent()); //当前页
-        }
 
+
+        }
+        if (userid != null && userid != 0){
+
+            Map<String, Object> sendPageMap = sendReceService.getUserSends(myPage1, mySize1, mesid, isRead,0);
+            int count = sendReceService.selectCount(new EntityWrapper<Org_send_rece>().eq("receId", userid).eq("isread", 0));
+            if (count > 0){
+                modelMap.addAttribute("count",count);
+            }
+            modelMap.addAttribute("sendRecesExes",sendPageMap.get("rows"));
+            modelMap.addAttribute("sendRecePage",sendPageMap.get("page")); //当前页
+            modelMap.addAttribute("number",sendPageMap.get("number")); //总页数
+            modelMap.addAttribute("active",isRead);
+            return  "home/orgMesAdmin";
+        }
         return "home/orgManMes";
     }
 
